@@ -5,7 +5,6 @@ import com.ibm.watson.developer_cloud.natural_language_classifier.v1.model.Class
 import com.ibm.watson.developer_cloud.natural_language_classifier.v1.model.Classifier;
 import com.ibm.watson.developer_cloud.natural_language_classifier.v1.model.Classifiers;
 import cronapi.CronapiMetaData;
-
 import java.io.File;
 import java.util.Map;
 
@@ -13,8 +12,9 @@ import java.util.Map;
 public final class NaturalLanguageClassifierOperations {
 
   @CronapiMetaData
-  public static Classification classify(String username, String password, String endPoint, Map<String, String> headers,
-                                        String classifierId, String text) {
+  public static Classification classify(String username, String password, String endPoint,
+      Map<String, String> headers,
+      String classifierId, String text) {
     NaturalLanguageClassifier service = new NaturalLanguageClassifier();
     service.setUsernameAndPassword(username, password);
     service.setEndPoint(endPoint);
@@ -24,8 +24,9 @@ public final class NaturalLanguageClassifierOperations {
   }
 
   @CronapiMetaData
-  public static Classifier createClassifier(String username, String password, String endPoint, Map<String, String> headers,
-                                            String name, String language, File trainingData) {
+  public static Classifier createClassifier(String username, String password, String endPoint,
+      Map<String, String> headers,
+      String name, String language, File trainingData) {
     NaturalLanguageClassifier service = new NaturalLanguageClassifier();
     service.setUsernameAndPassword(username, password);
     service.setEndPoint(endPoint);
@@ -35,8 +36,9 @@ public final class NaturalLanguageClassifierOperations {
   }
 
   @CronapiMetaData
-  public static void deleteClassifier(String username, String password, String endPoint, Map<String, String> headers,
-                                      String classifierId) {
+  public static void deleteClassifier(String username, String password, String endPoint,
+      Map<String, String> headers,
+      String classifierId) {
     NaturalLanguageClassifier service = new NaturalLanguageClassifier();
     service.setUsernameAndPassword(username, password);
     service.setEndPoint(endPoint);
@@ -46,8 +48,9 @@ public final class NaturalLanguageClassifierOperations {
   }
 
   @CronapiMetaData
-  public static Classifier getClassifier(String username, String password, String endPoint, Map<String, String> headers,
-                                         String classifierId) {
+  public static Classifier getClassifier(String username, String password, String endPoint,
+      Map<String, String> headers,
+      String classifierId) {
     NaturalLanguageClassifier service = new NaturalLanguageClassifier();
     service.setUsernameAndPassword(username, password);
     service.setEndPoint(endPoint);
@@ -57,7 +60,8 @@ public final class NaturalLanguageClassifierOperations {
   }
 
   @CronapiMetaData
-  public static Classifiers getClassifiers(String username, String password, String endPoint, Map<String, String> headers) {
+  public static Classifiers getClassifiers(String username, String password, String endPoint,
+      Map<String, String> headers) {
     NaturalLanguageClassifier service = new NaturalLanguageClassifier();
     service.setUsernameAndPassword(username, password);
     service.setEndPoint(endPoint);
